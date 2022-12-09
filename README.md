@@ -1,2 +1,2 @@
 # Capstone-SQL-Project
-Capstone Project
+Repository for my Capstone SQL Project
