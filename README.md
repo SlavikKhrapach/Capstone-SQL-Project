@@ -22,20 +22,9 @@ Here is an output of my java implementation:
 
    Let's familiarize ourselves with the data by taking a looking at the first few schools!
 
-#================================================================#===========#===============#==============#=================#=================#================#
-|                                                    school_name |   borough | building_code | average_math | average_reading | average_writing | percent_tested |
-#================================================================#===========#===============#==============#=================#=================#================#
-| New Explorations into Science, Technology and Math High School | Manhattan |          M022 |          657 |             601 |             601 |                |
-|                                           Essex Street Academy | Manhattan |          M445 |          395 |             411 |             387 |           78.9 |
-|                                   Lower Manhattan Arts Academy | Manhattan |          M445 |          418 |             428 |             415 |           65.1 |
-|                High School for Dual Language and Asian Studies | Manhattan |          M445 |          613 |             453 |             463 |           95.9 |
-|                  Henry Street School for International Studies | Manhattan |          M056 |          410 |             406 |             381 |           59.7 |
-|                                 Bard High School Early College | Manhattan |          M097 |          634 |             641 |             639 |           70.8 |
-|                   Urban Assembly Academy of Government and Law | Manhattan |          M445 |          389 |             395 |             381 |           80.8 |
-|                                        Marta Valle High School | Manhattan |          M025 |          438 |             413 |             394 |           35.6 |
-|                            University Neighborhood High School | Manhattan |          M446 |          437 |             355 |             352 |           69.9 |
-|                                         New Design High School | Manhattan |          M445 |          381 |             396 |             372 |           73.7 |
-#================================================================#===========#===============#==============#=================#=================#================#
+   
+![image](https://github.com/SlavikKhrapach/Capstone-SQL-Project/assets/120146359/180d671f-f9d6-4d61-b2bd-d211378490ac)
+
 
 
 
@@ -49,15 +38,12 @@ Here is an output of my java implementation:
    To understand  whether this  missing data  problem is  widespread  in New York, we will also 
    calculate the total number of schools in the database.
 
-#====================#=============#
-| num_tested_missing | num_schools |
-#====================#=============#
-|                 20 |         375 |
-#====================#=============#
+![image](https://github.com/SlavikKhrapach/Capstone-SQL-Project/assets/120146359/ffc6116a-5f03-4d40-a92a-5194194cbbec)
 
 
 
-3. Schools by building code
+
+4. Schools by building code
 
    There  are 20 schools  with  missing data for percent_tested,  which only makes up 5% of all 
    rows in the database.
@@ -68,11 +54,8 @@ Here is an output of my java implementation:
    are  multiple schools  based in the  same location.  Let's  find out how  many unique school 
    locations exist in our database.
 
-#======================#
-| num_school_buildings |
-#======================#
-|                  233 |
-#======================#
+![image](https://github.com/SlavikKhrapach/Capstone-SQL-Project/assets/120146359/e43e6e2a-d987-4e0a-8aed-ec210df4caa1)
+
 
 
 
@@ -85,20 +68,8 @@ Here is an output of my java implementation:
 
    First, let's find all schools with an average math score of at least 80% (out of 800).
 
-#=======================================================================#==============#
-|                                                           school_name | average_math |
-#=======================================================================#==============#
-|                                                Stuyvesant High School |          754 |
-|                                          Bronx High School of Science |          714 |
-|                                   Staten Island Technical High School |          711 |
-|                   Queens High School for the Sciences at York College |          701 |
-| High School for Mathematics, Science, and Engineering at City College |          683 |
-|                                        Brooklyn Technical High School |          682 |
-|                                           Townsend Harris High School |          680 |
-|                     High School of American Studies at Lehman College |          669 |
-|        New Explorations into Science, Technology and Math High School |          657 |
-|                                         Eleanor Roosevelt High School |          641 |
-#=======================================================================#==============#
+![image](https://github.com/SlavikKhrapach/Capstone-SQL-Project/assets/120146359/b2861d3d-bbfd-4baa-a3ec-4395b491767e)
+
 
 
 
@@ -110,11 +81,8 @@ Here is an output of my java implementation:
    Now let's look at the other end of the spectrum and find the single lowest score for reading.
    We will only select the score, not the school, to avoid naming and shaming!
 
-#================#
-| lowest_reading |
-#================#
-|            302 |
-#================#
+![image](https://github.com/SlavikKhrapach/Capstone-SQL-Project/assets/120146359/0fc8d830-3a1c-4b2d-be99-02e23879a863)
+
 
 
 
@@ -125,11 +93,8 @@ Here is an output of my java implementation:
 
    Now let's find the school with the highest average writing score.
 
-#========================#=============#
-|            school_name | max_writing |
-#========================#=============#
-| Stuyvesant High School |         693 |
-#========================#=============#
+![image](https://github.com/SlavikKhrapach/Capstone-SQL-Project/assets/120146359/dcee632d-e537-4a18-af0e-a082a5f358be)
+
 
 
 
@@ -144,20 +109,8 @@ Here is an output of my java implementation:
    What other schools are also excellent across the board? Let's look at scores across reading, 
    writing, and math to find out.
 
-#=======================================================================#=============#
-|                                                           school_name | average_sat |
-#=======================================================================#=============#
-|                                                Stuyvesant High School |        2144 |
-|                                          Bronx High School of Science |        2041 |
-|                                   Staten Island Technical High School |        2041 |
-|                     High School of American Studies at Lehman College |        2013 |
-|                                           Townsend Harris High School |        1981 |
-|                   Queens High School for the Sciences at York College |        1947 |
-|                                        Bard High School Early College |        1914 |
-|                                        Brooklyn Technical High School |        1896 |
-|                                         Eleanor Roosevelt High School |        1889 |
-| High School for Mathematics, Science, and Engineering at City College |        1889 |
-#=======================================================================#=============#
+![image](https://github.com/SlavikKhrapach/Capstone-SQL-Project/assets/120146359/ee561dc6-c44c-4bdc-97f9-bf6dcafbcd09)
+
 
 
 
@@ -169,15 +122,8 @@ Here is an output of my java implementation:
    We will build a  query that calculates the  number of schools  and the average SAT score per 
    borough!
 
-#===============#=============#=====================#
-|       borough | num_schools | average_borough_sat |
-#===============#=============#=====================#
-| Staten Island |          10 |                1439 |
-|        Queens |          69 |                1345 |
-|     Manhattan |          89 |                1340 |
-|      Brooklyn |         109 |                1230 |
-|         Bronx |          98 |                1202 |
-#===============#=============#=====================#
+![image](https://github.com/SlavikKhrapach/Capstone-SQL-Project/assets/120146359/f553207f-bae3-4bd0-9b1e-9fcfb2a25ec1)
+
 
 
 
@@ -190,12 +136,4 @@ Here is an output of my java implementation:
    For our final query of the database, let's focus on Brooklyn, which has 109 schools. We wish 
    to find the top five schools for math performance.
 
-#================================================#==============#
-|                                    school_name | average_math |
-#================================================#==============#
-|                 Brooklyn Technical High School |          682 |
-|                          Brooklyn Latin School |          625 |
-| Leon M. Goldstein High School for the Sciences |          563 |
-|                Millennium Brooklyn High School |          553 |
-|                            Midwood High School |          550 |
-#================================================#==============#
+![image](https://github.com/SlavikKhrapach/Capstone-SQL-Project/assets/120146359/52cda328-bed8-411c-ba64-97817d43419f)
